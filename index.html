@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Hot Cup Of Tea</title>
+  <style type="text/css" media="all">
+    *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #256764;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.container{
+  position: relative;
+  top: 50px;
+}
+.cup{
+  position: relative;
+  width: 240px;
+  height: 260px;
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 0 0 45% 45%;
+}
+.img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../mypic.png');
+  background-size: 100% 100%;
+  border-radius: 50%;
+  width: 70%;
+  height: 70%;
+  box-shadow: 0px 0px 15px 5px #e9e9e9, inset 0px 0px 15px 5px #e9e9e9;
+}
 
+.top{
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: -30px;
+  background: linear-gradient(to right, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+}
+.circle{
+  position: absolute;
+  width: calc(100% - 20px);
+  left: 10px;
+  top: 5px;
+  height: 50px;
+  background: linear-gradient(to left, #f9f9f9, #d9d9d9);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.tea{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(to right, #c57e65, #e28462);
+}
+.handle{
+  position: absolute;
+  right: -55px;
+  top: 20px;
+  width: 160px;
+  height: 180px;
+  border: 25px solid #dcdcdc;
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-radius: 50%;
+  transform: rotate(42deg);
+}
+.plate{
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 200px;
+  background: linear-gradient(to right, #f9f9f9, #e9e9e9);
+  border-radius: 50%;
+  box-shadow: 0 35px 35px rgba(0,0,0,.2);
+}
+.plate:before{
+  content: '';
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  top: 10px;
+  border-radius: 50%;
+  background: linear-gradient(to left, #f9f9f9, #e9e9e9);
+}
+.plate:after{
+  content: '';
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  top: 30px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(0,0,0,.2) 25%, transparent, transparent);
+}
+
+.vapour{
+  position: relative;
+  display: flex;
+  z-index: 1;
+  padding: 0 20px;
+}
+.vapour span{
+  position: relative;
+  bottom: 50px;
+  left: 10px;
+  display: block;
+  min-width: 8px;
+  height: 120px;
+  margin: 0 1px 50px;
+  background: #fff;
+  border-radius: 50%;
+  animation: vapour 4s linear infinite;
+  opacity: 0;
+  filter: blur(5px);
+  animation-delay: calc(var(--i)*-.5s);
+}
+
+@keyframes vapour {
+  0%{
+    transform: translateY(0) scaleX(5);
+    opacity: 0;
+  }
+  15%{
+    opacity: .2;
+  }
+  50%{
+    transform: translateY(-100%) scaleX(7);
+  }
+  95%{
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(-300%) scaleX(12);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="plate">
+      
+    </div>
+    <div class="cup">
+      <div class="img">
+
+      </div>
+      <div class="top">
+        <div class="circle">
+          <div class="tea">
+            
+          </div>
+        </div>
+        <div class="vapour">
+          <span style="--i:1"></span>
+          <span style="--i:5"></span>
+          <span style="--i:19"></span>
+          <span style="--i:3"></span>
+          <span style="--i:14"></span>
+          <span style="--i:4"></span>
+          <span style="--i:2"></span>
+          <span style="--i:6"></span>
+          <span style="--i:17"></span>
+          <span style="--i:8"></span>
+          <span style="--i:15"></span>
+          <span style="--i:7"></span>
+          <span style="--i:9"></span>
+          <span style="--i:13"></span>
+          <span style="--i:11"></span>
+          <span style="--i:16"></span>
+          <span style="--i:12"></span>
+          <span style="--i:20"></span>
+          <span style="--i:10"></span>
+        </div>
+      </div>
+      <div class="handle">
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
